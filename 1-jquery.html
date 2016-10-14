@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jquery test</title>
+<style>
+  div {
+    background-color: blue;
+  }
+</style>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+
+<body>
+  <div></div>
+  <button id="button">button</button>
+<script "type/javascript">
+    $(function () {
+      $('button').click(function(){
+        $("div").css("background-color","red");
+      })
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>2-jquery</title>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="./css/jquery-ui.min.css" type="text/css"/>
+
+  <style>
+    .box{
+      width: 300px;
+      height: 300px;
+      border: 1px solid gray;
+      margin: 50px auto;
+      padding-left: 20px;
+    }
+    .box:hover{
+      box-shadow:3px 3px 10px gray;
+    }
+    table{
+      width: 250px;
+      height: 250px;
+    }
+    table td:hover{
+      box-shadow:3px 3px 10px gray;
+    }
+    table th:hover{
+      box-shadow:3px 3px 10px gray;
+    }
+  </style>
+  <script type="text/javascript">
+    $(document).ready(function(){
+
+      $('#show').button().click(function(){
+        $('#dialog').dialog("open");
+
+      });
+      $('#dialog').dialog({
+        buttons:[{text:"OK",click:function(){
+          $('#s1').html($('#text1').val());
+          $('#s2').html($('#text2').val());
+          $('#s3').html($('#text3').val());
+          $(this).dialog("close");
+        }}],
+        modal:true,
+        autoOpen:false
+      });
+
+    });
+  </script>
+</head>
+<body>
+  <div class="box">
+      <!-- <h3 id="s1">姓名</h3>
+      <h3 id="s2">年龄</h3>
+      <h3 id="s3">专业</h3> -->
+      <table border="1">
+  <tr>
+    <th>姓名</th>
+    <th>年龄</th>
+    <th>专业</th>
+  </tr>
+  <tr>
+    <td><h3 id="s1"></h3></td>
+    <td><h3 id="s2"></h3></td>
+    <td><h3 id="s3"></h3></td>
+  </tr>
+</table>
+
+
+      <button id="show">填写信息</button>
+
+      <div id="dialog" title="请输入信息">
+      姓名：<input type="text" id="text1"></br>
+      年龄：<input type="text" id="text2"></br>
+      专业：<input type="text" id="text3">
+      </div>
+</div>
+</body>
+</html>

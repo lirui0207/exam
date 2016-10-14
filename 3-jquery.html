@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>3-jquery</title>
+    <script src="./js/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="./css/jquery-ui.min.css">
+    <script>
+        $(function () {
+            $('#accordion').accordion();
+        })
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .first{
+            background-color:gray;
+        }
+        .first {
+            border-color:gray;
+        }
+        .box{
+            background-color:gray;
+            width: 300px;
+            height: 400px;
+            text-align: center;
+            margin: 50px auto;
+            padding-top: 10px;
+        }
+        #accordion{
+            width: 250px;
+            background-color: gray;
+            margin: auto;
+        }
+        h3{
+            background-color:gray;
+            box-shadow: 1px 1px 1px 1px black;
+        }
+        p{
+            color: white;
+            background-color: black;
+            height: 30px;
+            width: 200px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+    </style>
+    <script>
+        $(function () {
+            $('p').hover(function () {
+                $(this).css('background-color','orange');
+            });
+            $('p').mouseout(function () {
+                $(this).css('background-color','black');
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="box">
+        <div id="accordion">
+            <h3>AjaxShake</h3>
+            <div class="first">
+                <p>JQuery</p>
+                <p>Flash</p>
+                <p>Prototype</p>
+                <p>Mootools</p>
+            </div>
+            <h3>AjaxShake</h3>
+            <div class="first">
+                <p>JQuery</p>
+                <p>Flash</p>
+                <p>Prototype</p>
+                <p>Mootools</p>
+            </div>
+            <h3>AjaxShake</h3>
+            <div class="first">
+                <p>JQuery</p>
+                <p>Flash</p>
+                <p>Prototype</p>
+                <p>Mootools</p>
+            </div>
+            <h3>AjaxShake</h3>
+            <div class="first">
+                <p>JQuery</p>
+                <p>Flash</p>
+                <p>Prototype</p>
+                <p>Mootools</p>
+            </div>
+    </div>
+
+</body>
+</html>
